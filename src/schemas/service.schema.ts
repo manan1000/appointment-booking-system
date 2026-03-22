@@ -13,3 +13,8 @@ export const createAvailabilitySchema=z.object({
     startTime: z.string().regex(timeRegex),
     endTime: z.string().regex(timeRegex)
 });
+
+
+export const getServiceSchema = z.object({
+    type: z.enum(["MEDICAL", "HOUSE_HELP", "BEAUTY", "FITNESS", "EDUCATION", "OTHER"]).optional(),
+});
